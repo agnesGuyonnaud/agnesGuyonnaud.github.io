@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourminator - Projet Scolaire</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .description { margin-bottom: 20px; }
+        .images { display: flex; gap: 10px; margin-bottom: 20px; }
+        .images img { max-width: 200px; height: auto; }
+        canvas { max-width: 400px; }
+    </style>
+</head>
+<body>
+    <h1>Tourminator</h1>
+    <div class="description">
+        <p>Tourminator est un jeu de stratégie où le joueur doit défendre sa base contre des vagues d'ennemis en plaçant des tours défensives. Ce projet a été réalisé en C++ avec une interface graphique simple utilisant SDL.</p>
+        <p>Le jeu inclut différents types de tours avec des capacités variées, des ennemis avec des comportements différents, et un système de vagues progressives. L'objectif est de survivre le plus longtemps possible tout en optimisant le placement des tours.</p>
+        <p>Ce projet m'a enseigné la gestion de la mémoire, les pointeurs, et l'intégration de bibliothèques graphiques externes.</p>
+    </div>
+    <div class="images">
+        <img src="images/tourminator1.jpg" alt="Capture d'écran Tourminator 1">
+        <img src="images/tourminator2.jpg" alt="Capture d'écran Tourminator 2">
+    </div>
+    <h2>Langages utilisés</h2>
+    <canvas id="langChart"></canvas>
+    <script>
+        const ctx = document.getElementById('langChart').getContext('2d');
+        const langChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['C++'],
+                datasets: [{
+                    data: [100],
+                    backgroundColor: ['#00599C']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+    <p><a href="index.html">Retour à l'index</a></p>
+</body>
+</html>

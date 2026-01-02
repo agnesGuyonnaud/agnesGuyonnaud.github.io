@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance 4 - Projet Scolaire</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .description { margin-bottom: 20px; }
+        .images { display: flex; gap: 10px; margin-bottom: 20px; }
+        .images img { max-width: 200px; height: auto; }
+        canvas { max-width: 400px; }
+    </style>
+</head>
+<body>
+    <h1>Puissance 4</h1>
+    <div class="description">
+        <p>Puissance 4 est l'implémentation classique du jeu de société où deux joueurs s'affrontent pour aligner quatre jetons de leur couleur. Ce projet a été développé en Python avec une interface en ligne de commande.</p>
+        <p>Le jeu gère le plateau de jeu, les tours alternés, la détection de victoires (lignes, colonnes, diagonales), et empêche les mouvements invalides. Une version avec IA basique a également été ajoutée pour jouer contre l'ordinateur.</p>
+        <p>Ce projet m'a familiarisé avec les structures de données comme les listes 2D, les algorithmes de recherche, et la programmation modulaire.</p>
+    </div>
+    <div class="images">
+        <img src="images/puissance41.jpg" alt="Capture d'écran Puissance 4 1">
+        <img src="images/puissance42.jpg" alt="Capture d'écran Puissance 4 2">
+    </div>
+    <h2>Langages utilisés</h2>
+    <canvas id="langChart"></canvas>
+    <script>
+        const ctx = document.getElementById('langChart').getContext('2d');
+        const langChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Python'],
+                datasets: [{
+                    data: [100],
+                    backgroundColor: ['#3776AB']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+    <p><a href="index.html">Retour à l'index</a></p>
+</body>
+</html>

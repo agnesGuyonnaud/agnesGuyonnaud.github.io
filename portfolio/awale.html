@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awale - Projet Scolaire</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .description { margin-bottom: 20px; }
+        .images { display: flex; gap: 10px; margin-bottom: 20px; }
+        .images img { max-width: 200px; height: auto; }
+        canvas { max-width: 400px; }
+    </style>
+</head>
+<body>
+    <h1>Awale</h1>
+    <div class="description">
+        <p>L'Awale est un jeu traditionnel africain de stratégie et de réflexion. Ce projet scolaire consistait à implémenter une version numérique du jeu en Java, permettant à deux joueurs de s'affronter sur un plateau de 12 cases.</p>
+        <p>Le jeu respecte les règles classiques : chaque joueur distribue ses graines dans les cases adverses, capturant celles de l'adversaire selon des règles précises. L'objectif est d'avoir plus de graines que l'adversaire à la fin de la partie.</p>
+        <p>Ce projet m'a permis de développer mes compétences en programmation orientée objet, en gestion d'événements utilisateur et en logique algorithmique.</p>
+    </div>
+    <div class="images">
+        <img src="images/awale1.png" alt="Capture d'écran Awale 1">
+        <img src="images/awale2.jpg" alt="Capture d'écran Awale 2">
+    </div>
+    <h2>Langages utilisés</h2>
+    <canvas id="langChart"></canvas>
+    <script>
+        const ctx = document.getElementById('langChart').getContext('2d');
+        const langChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Java'],
+                datasets: [{
+                    data: [100],
+                    backgroundColor: ['#ED8B00']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+    <p><a href="index.html">Retour à l'index</a></p>
+</body>
+</html>
